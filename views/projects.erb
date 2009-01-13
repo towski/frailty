@@ -1,0 +1,55 @@
+  <h1>Project Name</h1>
+  <div id='last_build'>
+    <h1>Milestone name</h1>
+    <blockquote>
+      <p>Any messages about the deploy/features or something</p>
+      <p><strong>Nicole committed/deployed</strong> on the January 11.</p>
+    </blockquote>
+    <div class="output">
+      <ul>
+        <% 20.times do %>
+        <li>
+          <h4>As a project owner</h4>
+          <p class="meta">I want to be able to use GitHub as a build triggerer<br/>
+            So that my project is built everytime I push to the Holy Hub</p>
+            <form>
+              <ul>
+                <li>
+                  <div class="column">
+                    <input id="Field1" name="Field1" type="checkbox" class="field checkbox first" value="Pass" tabindex="1"/>
+                    <label class="choice" for="Field1">Pass</label>
+                  
+                    <input id="Field2" name="Field2" type="checkbox" class="field checkbox" value="Fail" tabindex="2"/>
+                    <label class="choice" for="Field2">Fail</label>
+                  
+                    <input id="Field3" name="Field3" type="checkbox" class="field checkbox" value="Pending" tabindex="3"/>
+                    <label class="choice" for="Field3">Pending</label>
+                  </div>
+                </li>
+                <li>
+                  <label class="desc" id="title104" for="Field104">Comment if test fails is required, not sure how to trigger this</label>
+                  <div>
+                    <textarea id="Field104" name="Field104" class="field textarea medium" rows="10" cols="50" tabindex="4"></textarea>
+                  </div>
+                </li>
+                <li class="buttons">
+                  <input id="saveForm" class="btTxt" type="submit" value="Submit" />
+                </li>
+              </ul>
+            </form>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <h2>Past tests</h2>
+  <ul id="past_test">
+   <% 5.times do %>
+    <li>
+      <div class="pass fail pending">
+        <h4><a href="/tests#">Milestone v.3</a></h4>
+        <p><strong>Nicole committed/deployed</strong> on the January 11. <span>commit/deploy specific info</span></p>
+      </div>
+    </li>
+  <% end %>
+  </ul>
