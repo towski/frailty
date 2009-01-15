@@ -13,7 +13,7 @@ helpers do
   
   # Usage: partial :foo
   def partial(page, options={})
-      erb :tests, options.merge!(:layout => false)
+      erb :milestones, options.merge!(:layout => false)
   end
 end
 
@@ -25,14 +25,14 @@ end
   
   # projects home shows current testing, past testing will be in tests
   get '/projects' do
-    #@current_test = Test.last
+    #@current_milestone = Test.last
     erb :projects
   end
 
   # tests are populate by something elsewhere I think
-  get '/tests' do
-    #@test = Test.all
-    erb :tests
+  get '/milestones' do
+    #@milestone = Milestone.all
+    erb :milestones
   end
 
   # create
