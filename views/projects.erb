@@ -1,10 +1,10 @@
-  <h1>Project Name</h1>
-  <div id='last_build'>
-    <h1>Milestone name</h1>
-    <blockquote>
-      <p>Any messages about the deploy/features or something</p>
-      <p><strong>Nicole committed/deployed</strong> on the January 11.</p>
-    </blockquote>
+  <h1>Tender Support</h1>
+    <div id="test">
+      <div id='current_milestone'>
+        <h1>Launch Critical</h1>
+        <p>Final testing for official launch</p>
+        <p><strong>Nicole committed/deployed</strong> to <a href="#">staging</a> on the January 11.</p>
+    </div>
     <div class="output">
       <ul>
         <% 20.times do %>
@@ -43,12 +43,12 @@
     </div>
   </div>
   <h2>Past tests</h2>
-  <ul id="past_test">
+  <ul id="past_milestone">
    <% 5.times do %>
-    <li>
-      <div class="pass fail pending">
-        <h4><a href="/tests#">Milestone v.3</a></h4>
-        <p><strong>Nicole committed/deployed</strong> on the January 11. <span>commit/deploy specific info</span></p>
+    <li class="pass fail pending">
+      <div>
+        <h4><a href="/milestones#">Milestone v.3</a> <span><strong>Nicole committed/deployed</strong> to staging/production on January 11.</span></h4>
+        <p>User badges, UI for marketing</p>
       </div>
     </li>
   <% end %>
