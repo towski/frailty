@@ -1,21 +1,32 @@
 module Frailty
   def self.setup_schema
     Sequel::Model.db.instance_eval do
-      #create_table! :users do
-      #  primary_key :id
-      #  int         :external_id
-      #  varchar     :login
-      #  varchar     :avatar_url
-      #end
-      #
-      #create_table! :posts do
-      #  primary_key :id
-      #  int         :external_id
-      #  int         :user_id
-      #  varchar     :episode
-      #  varchar     :body # 140 chars, baby
-      #  datetime    :created_at
-      #end
+      create_table! :project do
+        primary_key :id
+        varchar     :name
+        varchar     :milestone
+        varchar     :description
+      end
+      
+      create_table! :milestone do
+        primary_key :id
+        int         :project_id
+        varchar     :name
+        varchar     :feature
+        datetime    :created_at
+        datetime    :completed_at
+        datetime    :due_at
+      end
+      
+      create_table! :feature do
+        primary_key :id
+        int         :project_id
+        int         :milestone_id
+        varchar     :name
+        varchar     :body # 140 chars, baby
+        #varchar     :state # pass fail pending from form
+        #varchar     :comment #if fail comment required if pass or pending optional
+      end
     end
   end
 end
